@@ -26,10 +26,6 @@
         "audios"
       ]
     },
-    "body": {
-      "type": "blocks",
-      "required": true
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -45,6 +41,31 @@
       "relation": "manyToOne",
       "target": "api::author.author",
       "inversedBy": "articles"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "ArticleShortDescription": {
+      "type": "richtext"
+    },
+    "faqs": {
+      "type": "richtext"
+    },
+    "tableofcontent": {
+      "type": "richtext"
+    },
+    "articlebody": {
+      "type": "blocks"
+    },
+    "articledetailbanner": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

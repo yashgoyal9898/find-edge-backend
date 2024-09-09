@@ -803,7 +803,6 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     title: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
-    body: Attribute.Blocks & Attribute.Required;
     slug: Attribute.UID<'api::article.article', 'title'>;
     category: Attribute.Relation<
       'api::article.article',
@@ -814,6 +813,14 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'api::article.article',
       'manyToOne',
       'api::author.author'
+    >;
+    content: Attribute.RichText;
+    ArticleShortDescription: Attribute.RichText;
+    faqs: Attribute.RichText;
+    tableofcontent: Attribute.RichText;
+    articlebody: Attribute.Blocks;
+    articledetailbanner: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
