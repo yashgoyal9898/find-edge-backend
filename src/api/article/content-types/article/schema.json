@@ -58,14 +58,18 @@
       "type": "blocks"
     },
     "articledetailbanner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "metakeywords": {
+      "type": "text"
     }
   }
 }

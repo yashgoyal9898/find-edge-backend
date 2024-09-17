@@ -822,6 +822,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     articledetailbanner: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    metakeywords: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
