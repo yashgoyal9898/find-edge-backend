@@ -804,9 +804,9 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     slug: Attribute.UID<'api::article.article', 'title'>;
-    category: Attribute.Relation<
+    categories: Attribute.Relation<
       'api::article.article',
-      'manyToOne',
+      'manyToMany',
       'api::category.category'
     >;
     author: Attribute.Relation<
@@ -892,7 +892,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     slug: Attribute.UID<'api::category.category', 'title'> & Attribute.Required;
     articles: Attribute.Relation<
       'api::category.category',
-      'oneToMany',
+      'manyToMany',
       'api::article.article'
     >;
     createdAt: Attribute.DateTime;
